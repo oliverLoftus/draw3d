@@ -1,5 +1,5 @@
 const canvas = document.getElementById("myCanvas");
-canvas.style.backgroundColor = "black";
+canvas.style.backgroundColor = "DeepSkyBlue";
 const ctx = canvas.getContext("2d");
 
 const zero_X = canvas.width / 2;
@@ -65,11 +65,11 @@ function getStyle(tri) {
   let normal = getNormal(tri);
   let shade = vDistance(light, normal);
   //let blue = vDistance(light2, normal);
-  ctx.strokeStyle = `rgba(${200 * shade}, ${200 * shade}, ${
-    200 * shade
+  ctx.strokeStyle = `rgba(${255 * shade}, ${280 * shade}, ${
+    300 * shade
   }, ${strokeAlpha})`;
-  ctx.fillStyle = `rgba(${200 * shade}, ${200 * shade}, ${
-    200 * shade
+  ctx.fillStyle = `rgba(${255 * shade}, ${280 * shade}, ${
+    300 * shade
   }, ${fillAlpha})`;
 }
 
