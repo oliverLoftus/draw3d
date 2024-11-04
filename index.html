@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple 3D Drawing</title>
+    <style>
+      html {
+        overflow: hidden;
+        overscroll-behavior: none;
+      }
+      #main {
+        width: 800px;
+      }
+
+      #buttonContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .button {
+        padding: 10px;
+        margin: 5px;
+      }
+
+      #rightButtons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        left: 740px;
+        top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <canvas id="myCanvas" width="800" height="600"></canvas>
+
+      <div id="buttonContainer">
+        <!-- Buttons underneath the canvas -->
+        <button id="Cube" class="button" onclick="handleButtonClick('Cube')">
+          Cube
+        </button>
+        <button
+          id="Cylinder"
+          class="button"
+          onclick="handleButtonClick('Cylinder')"
+        >
+          Cylinder
+        </button>
+        <button
+          id="Icosahedron"
+          class="button"
+          onclick="handleButtonClick('Icosahedron')"
+        >
+          Icosahedron
+        </button>
+        <button id="Sword" class="button" onclick="handleButtonClick('Sword')">
+          Sword
+        </button>
+      </div>
+
+      <div id="rightButtons">
+        <!-- Buttons to the right of the canvas -->
+        <button id="Solid" class="button" onclick="handleButtonClick('Solid')">
+          Solid
+        </button>
+        <button id="Wires" class="button" onclick="handleButtonClick('Wires')">
+          Wires
+        </button>
+        <button id="XRay" class="button" onclick="handleButtonClick('XRay')">
+          X-Ray
+        </button>
+      </div>
+    </div>
+
+    <script src="classes.js"></script>
+    <script src="functions.js"></script>
+    <script src="transform.js"></script>
+
+    <script src="tinySword.js"></script>
+    <script src="cube.js"></script>
+    <script src="tetrahedron.js"></script>
+    <script src="icosahedron.js"></script>
+    <script src="cylinder.js"></script>
+
+    <script src="draw.js"></script>
+    <script src="rotation.js"></script>
+    <script src="mouseControl.js"></script>
+
+    <script>
+      function handleButtonClick(buttonId) {
+        console.log("Button clicked:", buttonId);
+      }
+    </script>
+    <script src="buttonActions.js"></script>
+  </body>
+</html>
